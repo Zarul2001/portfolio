@@ -1,0 +1,436 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text for contrast */
+  }
+  
+    /* Navbar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure navbar is above other content */
+        background-color: #333;
+        padding: 10px 0; /* Adjust padding */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    
+    /* Navbar Container */
+    .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; /* Distribute logo and links horizontally */
+        align-items: center;
+        padding: 0 2rem;
+    }
+    
+    /* Navbar Brand */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between logo and text */
+    }
+    
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .navbar-brand span {
+        font-size: 1.8rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    /* Navbar Links */
+    .navbar-links {
+        list-style: none;
+        display: flex; /* Display links horizontally by default */
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar-links li a:hover {
+        color: #ff6f61;
+    }
+    
+    /* Responsive Design: Smaller Screens */
+    @media (max-width: 768px) {
+        .navbar-container {
+        flex-direction: column; /* Stack brand and links vertically */
+        align-items: center;
+        }
+    
+        .navbar-links {
+        flex-direction: row; /* Links stay horizontal even on smaller screens */
+        justify-content: center; /* Center the links */
+        gap: 1.5rem;
+        margin-top: 10px; /* Add space between brand and links */
+        }
+    
+        .navbar-links li a {
+        font-size: 1rem; /* Adjust font size for smaller devices */
+        }
+    }
+    
+
+    h1, h2, p {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    /* Particle Background */
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    /* Header Section */
+    header {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        border-bottom: 1px solid #333; /* Subtle border */
+    }
+
+    header#home {
+        margin-top: 80px; /* This will push the header down below the fixed navbar */
+        text-align: center; /* Center the text */
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        color: #00d1b2; /* Highlighted header color */
+    }
+    
+    header p {
+        font-size: 1.2rem;
+        color: #ccc; /* Muted subtitle text */
+    }
+    
+    /* Team Section */
+    .team {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-auto-rows: auto; /* Dynamic row height */
+        gap: 20px; /* Space between grid items */
+        max-width: 800px; /* Limit the grid width */
+        margin: 40px auto; /* Center the grid horizontally */
+        padding: 20px;
+    }
+    
+    .member {
+        background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+    }
+    
+    .member:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    }
+    
+    .member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* Circular images */
+        object-fit: fill;
+        margin-bottom: 15px;
+        border: 3px solid #fff; /* White border for contrast */
+    }
+    
+    .member h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #00d1b2; /* Highlighted name color */
+    }
+    
+    .member p {
+        font-size: 1rem;
+        color: #ccc; /* Muted text color */
+    }
+    
+    /* About Us Section */
+    .about-us {
+        background: rgba(94, 78, 185, 0.671); /* Semi-transparent background */
+        padding: 40px 20px;
+        text-align: center;
+        margin: 1px auto;  
+    }
+    
+    .about-us h2 {
+        font-size: 2rem;
+        color: #00d1b2;
+    }
+    
+    .about-us p {
+        font-size: 1.3rem;
+        color: #ccc;
+        max-width: 100%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    
+    /* Our Goal Section */
+    .our-goal {
+        background: rgba(119, 49, 8, 0.788); /* Semi-transparent section */
+        padding: 40px 20px;
+        text-align: center;
+        margin: 20px auto;
+        padding-bottom: 50px; 
+        margin-bottom: 50px;
+    }
+    
+    .our-goal h2 {
+        font-size: 2rem;
+        color: #00d1b2;
+    }
+    
+    .our-goal p {
+        font-size: 1.3rem;
+        color: #ccc;
+        max-width: 100%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .team {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        }
+    
+        header h1 {
+        font-size: 2rem;
+        }
+    
+        header p {
+        font-size: 1rem;
+        }
+    }
+    
+    /* Footer General Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0px 20px;
+    margin-top: 50px;
+
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .footer-links {
+    flex: 1;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #00d1b2;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #ff6f61;
+  }
+  
+  .footer-contact {
+    flex: 1;
+    
+}
+  
+  
+  .footer-contact h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #00d1b2;
+  }
+  
+  .footer-newsletter {
+    flex: 1;
+    
+  }
+  
+  .footer-newsletter h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #00d1b2;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-newsletter input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .footer-newsletter button {
+    padding: 10px;
+    background-color: #ff6f61;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #e05546;
+  }
+  
+  .footer-social {
+    margin-top: 20px;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #ff6f61;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-newsletter form {
+      flex-direction: column;
+    }
+    
+  }
+  
+
+
+/* Mid-section styles */
+.mid-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: black; /* Adjust background color as needed */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between buttons */
+    gap: 20px; /* Ensures horizontal space between buttons */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Button styles */
+.button {
+    padding: 15px 30px;
+    background-color: #00d1b2; /* Button background color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex: 1; /* Makes sure each button occupies equal space */
+    margin: 0 10px; /* Add horizontal space between buttons */
+}
+
+.button:hover {
+    background-color: #00a895; /* Darker color on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-container {
+        flex-wrap: wrap; /* Buttons will wrap on smaller screens */
+        justify-content: center; /* Center the buttons when wrapped */
+    }
+
+    .button {
+        margin-bottom: 15px; /* Space between rows when wrapped */
+        flex: 1 1 calc(50% - 40px); /* Two buttons per row with spacing on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        flex: 1 1 calc(100% - 40px); /* One button per row on very small screens */
+    }
+}
